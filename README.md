@@ -77,6 +77,7 @@ npm run audit
 | `--level`      | `-l`  | The minimum audit level to validate; Same as the original `--audit-level` flag |
 | `--production` | `-p`  | Skip checking the `devDependencies`                                            |
 | `--registry`   | `-r`  | The npm registry url to use                                                    |
+| `--npm-path`   | `-n`  | The path of the npm cli to use                                                 |
 
 <br />
 

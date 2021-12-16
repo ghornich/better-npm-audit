@@ -47,6 +47,7 @@ program
   .option('-l, --level <auditLevel>', 'The minimum audit level to validate.')
   .option('-p, --production', 'Skip checking the devDependencies.')
   .option('-r, --registry <url>', 'The npm registry url to use.')
+  .option('-n, --npm-path <path>', 'The path of the npm cli to use.')
   .action((options: CommandOptions) => handleInput(options, callback));
 
 program.parse(process.argv);

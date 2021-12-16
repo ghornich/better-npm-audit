@@ -11,8 +11,10 @@ import { getExceptionsIds } from '../utils/vulnerability';
  */
 export default function handleInput(options: CommandOptions, fn: (T1: string, T2: AuditLevel, T3: number[]) => void): void {
   // Generate NPM Audit command
+  const npmPath = get(options, 'npm-path') || 'npm';
+
   const auditCommand: string = [
-    'npm audit',
+    npmPath + ' audit',
     // flags
     get(options, 'production') ? '--production' : '',
     get(options, 'registry') ? `--registry=${options.registry}` : '',
